@@ -25,6 +25,7 @@ public class TestMain {
 
         String color = "AZUL";
         ColoresHex hex = new ColoresHex(color);
+        //Para efectos de prueba, se ha generado una relacion con la clase ColoresRGB
         ColoresRGB rgb = new ColoresRGB(color);
 
         System.out.println("Usando interfaz compatible:");

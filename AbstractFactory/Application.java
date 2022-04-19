@@ -2,19 +2,22 @@ package AbstractFactory;
 
 public class Application {
     
-    private Jacket jacketProduct;
-    private Shirt shirtProduct;
-    private Pants pantsProduct;
+    
+    private AbstractFactory factory;
 
     public Application(AbstractFactory factory){
-        jacketProduct = factory.createJacket();
-        shirtProduct = factory.createShirt();
-        pantsProduct = factory.createPants();
+        this.factory = factory;
     }
     public void make() {
-        jacketProduct.make();
-        shirtProduct.make();
-        pantsProduct.make();
+
+        Jacket producJacket = factory.createJacket();
+        producJacket.make();
+
+        Shirt producShirt = factory.createShirt();
+        producShirt.make();
+        
+        Pants producPants = factory.createPants();
+        producPants.make();
         
     }
 }
